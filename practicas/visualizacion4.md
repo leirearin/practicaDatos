@@ -11,7 +11,3 @@ Los datos obtenidos se guardan como JSON en un fichero de nombre [pobData.js](..
 Para visualizar los datos, se utiliza la librería de [Google Chart](https://developers.google.com/chart/) y el tipo de gráfico [Scatter Chart](https://developers.google.com/chart/interactive/docs/gallery/scatterchart).
 El resultado es el que se muestra en la página [pobDataGoogle.html](../geocoordenadas/pobDataGoogle.html)
 
-Se puede realizar la representación de los mismos datos con otras librerías, por ejemplo:
-- [Poblaciones con GoolgleChart](../geocoordenadas/pobDataGoogle.html) - [Google Chart](https://developers.google.com/chart/interactive/docs/gallery/scatterchart)
-- [Poblaciones con Plotly.html](../geocoordenadas/pobDataPlotly.html) - [Plotly](https://plot.ly/javascript/line-and-scatter/#data-labels-hover)
-- [Poblaciones con CanvasJS](../geocoordenadas/pobDataCanvasJS.html) - [CanvasJS](https://canvasjs.com/html5-javascript-scatter-point-chart/)
