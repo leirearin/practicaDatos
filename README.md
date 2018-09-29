@@ -31,7 +31,7 @@ Instrucciones para las practicas:
 - [practica visualizacion1](practicas/visualizacion1)
 - [practica visualizacion2](practicas/visualizacion2)
 - [practica visualizacion3](practicas/visualizacion3)
-- [practica visualizacion4](practicas/Entrega)
+- [practica visualizacion4](practicas/visualizacion4)
 
 # Ejemplos de orígenes de datos
 - [Datos abiertos Donostia](https://www.donostia.eus/datosabiertos/)
