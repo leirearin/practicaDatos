@@ -1,0 +1,106 @@
+<html>
+  <head>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	 <script type="text/javascript" src="jasonprueba.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+	   
+
+       function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Fecha');
+        data.addColumn('number', 'Urbano');
+		data.addColumn('number', 'Interurbano');
+		data.addColumn('number', 'Especial y discrecional');
+	
+
+        x=[]; y=[]; z=[]; k=[]; 
+        for (i=0;i<obj.length;i++) {
+          x[i]=obj[i][1];
+          y[i]=obj[i][2];
+		  z[i]=obj[i][3];
+		  k[i]=obj[i][4];
+		  
+		
+         
+          data.addRows([[x[i], y[i], z[i], k[i]]]);
+        }
+
+        var options = {
+          chart: {
+            title: 'Estadística de Transporte de Viajeros (en miles)',
+            subtitle: 'Total de viajeros por tipo y medio de transporte en 2017',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 500,
+		  width: 1000,
+          colors: ['#42455A', '#6E749A', '#ABB0D6']       
+		  };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+	  
+	    </script>
+		
+<br></br>
+<br></br>
+
+		 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript" src="jason.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data2 = new google.visualization.DataTable();
+        data2.addColumn('number', 'mes');
+        data2.addColumn('number', 'Corta distancia');
+		data2.addColumn('number', 'Media distancia');
+		data2.addColumn('number', 'Larga distancia');
+	
+
+        x=[]; y=[]; z=[]; k=[]; 
+        for (i=0;i<obj.length;i++) {
+          x[i]=obj[i][0];
+          y[i]=obj[i][5];
+		  z[i]=obj[i][6];
+		  k[i]=obj[i][7]
+		  
+		
+         
+          data2.addRows([[x[i], y[i], z[i], k[i]]]);
+        }
+      var options2 = {
+        chart: {
+          title: 'Total de viajeros en autobus interurbano',
+          subtitle: 'por distancia recorrida (en miles)'
+        },
+        width: 1000,
+        height: 500,
+        axes: {
+          x: {
+            0: {side: 'bottom'}
+          }
+        }
+      };
+
+      var chart2 = new google.charts.Line(document.getElementById('line_top_x'));
+
+      chart2.draw(data2, google.charts.Line.convertOptions(options2));
+    }
+  </script>
+  </head>
+<body>
+
+    <div id="columnchart_material" style="width: 1000px; height: 550px;"></div>
+	<div id="line_top_x"></div>
+
+  </body>
+  	
+</html>
